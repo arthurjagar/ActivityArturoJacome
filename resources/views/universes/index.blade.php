@@ -6,23 +6,33 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 </head>
 <body>
-    <h1>Universes</h1>
+    <h1>All Universes</h1>
+
+    <br> 
+
+    <a href="{{ route('universes.create') }}">Create Universe</a>
+
+    <br><br>
+
     <table>
         <thead>
             <tr>
                 <th>ID</th>
                 <th>Name</th>
                 <th>Company</th>
-                <th>Age</th>
+                <th>Actions</th>
             </tr>
         </thead>
+
         <tbody>
             @foreach ($universes as $universe)
                 <tr>
                     <td>{{ $universe->id }}</td>
                     <td>{{ $universe->name }}</td>
                     <td>{{ $universe->company }}</td>
-                    <td>{{ $universe->age }}</td>
+                    <td>
+                        <a href="{{ route('universes.show', $universe->id) }}">View</a>
+                    </td>
                 </tr>
             @endforeach
         </tbody>

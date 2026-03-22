@@ -24,7 +24,7 @@
                     <td>{{ $superhero->name }}</td>
                     <td>{{ $superhero->real_name }}</td>
                     <td>{{ $superhero->gender }}</td>
-                    <td>{{ $superhero->universe_id }}</td>
+                    <td>{{ $superhero->universe->universe}}</td>
                 </tr>
             @endforeach
         </tbody>

@@ -14,7 +14,7 @@ class SuperheroesController extends Controller
     public function index()
     {
         $superheroes = Superheroes::all();
-
+        dd($superheroes)
         return view ('superheroes.index', compact('superheroes'));
     }
 
